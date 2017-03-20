@@ -90,11 +90,19 @@ kubectl delete deploy hello-kube
 
 Build Image: `sudo docker build -t hello-kube:v1 .`
 
-Create a Deployment: `kubectl run hello-kube --image=hello-kube:v1 --port=1337`
+Create a Deployment, and Expose a Service:
 
-Expose a Service: `kubectl expose deploy hello-kube --type=LoadBalancer`
+```
+kubectl run hello-kube --image=hello-kube:v1 --port=1337
+kubectl expose deploy hello-kube --type=LoadBalancer
+```
 
-Delete: `kubectl delete <deploy/service> hello-kube`
+Delete Deployments and Services:
+
+```
+kubectl delete service hello-kube
+kubectl delete deploy hello-kube
+```
 
 Get information: `kubectl get <deploy/pods/services>`
 
