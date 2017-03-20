@@ -22,19 +22,19 @@ First, we're going to download and install **[MiniKube 0.17.1](https://github.co
 which is the latest version as the time of writing.
 
 - Linux Users:
-  - Run the following command in your UNIX Terminal to download MiniKube and Kubectl.
+  - Run the following command in your UNIX Terminal to download `minikube` and `kubectl`.
   - `curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
 - macOS Users:
   - Run the following command in your macOS Terminal to download MiniKube.
   - `curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
-  - Next, we'll use Homebrew to install the XHyve VM Driver.
+  - Next, we'll use Homebrew to install the xhyve VM Driver.
   - `brew install docker-machine-driver-xhyve &&
     sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve &&
     sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve`
 
-  - After that, we need to instal kubectl. Copy and Paste the following.
+  - After that, we need to install kubectl. Run the following command.
   - `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl`
 
@@ -44,7 +44,7 @@ which is the latest version as the time of writing.
 
 After that, you could check `minikube`'s version with `minikube version`.
 
-You could do the same for `kubectl` (Kubernetes' CLI) with `kubectl version`.
+You could do the same for `kubectl` with `kubectl version`.
 
 ## Step 2: Configuring MiniKube
 
@@ -70,6 +70,7 @@ again after restarting the host machine, or when you're experiencing bugs.
 
 After starting up the MiniKube VM and configuring `kubectl` and Docker, let's see if it works!
 
+- View Cluster Information with `kubectl cluster-info`
 - Bring up the Kubernetes Dashboard with `minikube dashboard`.
 
 ## Additional Notes
