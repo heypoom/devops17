@@ -1,8 +1,8 @@
 # Installing and Configuring MiniKube
 
-Welcome to the Kubernetes Journey. Let's begin with installing the necessary tools.
-Do note that this might take a while.
-Please get them ready, so we could go straight to the fun part!
+Welcome to the Kubernetes Journey! Let us begin with installing the necessary tools.
+Do note that this might take a while. Please get them ready as soon as possible,
+so we could go straight to the fun part!
 
 We're going to use **MiniKube** to set up a Virtual Machine to run Kubernetes on.
 MiniKube is a tool that helps us to **create a local Kubernetes cluster**.
