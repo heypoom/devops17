@@ -7,8 +7,8 @@ Please get them ready, so we could go straight to the fun part!
 
 We're going to use **MiniKube** to set up a Virtual Machine to play with.
 
-MiniKube helps us to create a single-node Kubernetes cluster. So, we'll be able
-to do some experiments with Kubernetes on our laptop.
+MiniKube is a tool that helps us to **create a local Kubernetes cluster**.
+So, we'll be able to do some experiments with Kubernetes directly on our laptop.
 
 ## Step 1: Installing MiniKube
 
@@ -41,16 +41,18 @@ You could do the same for Kubectl (Kubernetes CLI) with `kubectl version`.
 
 ## Step 2: Configuring MiniKube
 
+We're going to configure `minikube` and `kubectl`. **kubectl** is
+**Kubernetes' Command Line Interface**, which we'll use it to control
+and interact with our Kubernetes cluster.
+
 You might need to do this after restarting the host machine, or when you're experiencing bugs.
 
 1. Start MiniKube's Virtual Machine. This will take a while.
    - `minikube start`
    - On macOS, you need to use `minikube start --vm-driver=xhyve` instead.
 
-2. Configure **kubectl** to use MiniKube's context.
+2. Configure kubectl to use MiniKube's context.
    - `kubectl config use-context minikube`
-   - Kubectl is **Kubernetes' Command Line Interface**.
-     We'll use it to control and interact with our Kubernetes cluster.
 
 3. Configure Docker's Environment Variables to use MiniKube.
    - `eval $(minikube docker-env)`
@@ -59,9 +61,7 @@ You might need to do this after restarting the host machine, or when you're expe
 
 ## Step 3: Does it work?
 
-After starting up the MiniKube VM and configuring Kubernetes
-
--
+After starting up the MiniKube VM and configuring Kubectl and Docker, let's see if it works.
 
 ### Additional Notes
 
