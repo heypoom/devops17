@@ -1,11 +1,18 @@
+Welcome to the Kubernetes Journey. Let's begin with installing the necessary tools.
+
+Do note that this might take a while.
+Please get them ready, so we could go straight to the fun part!
+
 # Installing and Configuring MiniKube
 
-We're going to use MiniKube to set up a Virtual Machines to create a single-node
-Kubernetes cluster. So, we'll be able to do some experiments with Kubernetes on our laptop.
+We're going to use **MiniKube** to set up a Virtual Machine to play with.
+
+MiniKube helps us to create a single-node Kubernetes cluster. So, we'll be able
+to do some experiments with Kubernetes on our laptop.
 
 ## Step 1: Installing MiniKube
 
-First, we're going to download and install MiniKube 0.17.1, which is the latest as
+First, we're going to download and install **MiniKube 0.17.1**, which is the latest as
 the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/minikube/releases).
 
 - Linux Users:
@@ -21,7 +28,7 @@ the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/m
     sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve &&
     sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve`
 
-  - After that, we need to install Kubectl CLI. Copy and Paste the following.
+  - After that, we need to instal kubectl. Copy and Paste the following.
   - `curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
   && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl`
 
@@ -40,10 +47,10 @@ You might need to do this after restarting the host machine, or when you're expe
    - `minikube start`
    - On macOS, you need to use `minikube start --vm-driver=xhyve` instead.
 
-2. Configure Kubectl to use MiniKube's context.
+2. Configure **kubectl** to use MiniKube's context.
    - `kubectl config use-context minikube`
-   - Kubectl is Kubernetes' command line tool.
-     We'll use it to control our Kubernetes cluster.
+   - Kubectl is **Kubernetes' Command Line Interface**.
+     We'll use it to control and interact with our Kubernetes cluster.
 
 3. Configure Docker's Environment Variables to use MiniKube.
    - `eval $(minikube docker-env)`
@@ -52,7 +59,7 @@ You might need to do this after restarting the host machine, or when you're expe
 
 ## Step 3: Does it work?
 
-After starting
+After starting up the MiniKube VM and configuring Kubernetes
 
 -
 
