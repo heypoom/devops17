@@ -5,12 +5,12 @@ Do note that this might take a while. Please get them ready as soon as possible,
 so we could go straight to the fun part!
 
 We're going to use **MiniKube** to set up a Virtual Machine to run Kubernetes on.
-It is a tool that helps us to **create a local Kubernetes cluster**.
-So, we'll be able to do some experiments with Kubernetes directly on our laptop.
+It is a tool that helps us to **create a single-node Kubernetes cluster**.
+So, we'll be able to do some experiments locally on our laptop.
 
 ## Step 0: Installing Docker
 
-I'm sure everyone already knows the basics of docker, as it is one of the prerequisites.
+I'm quite sure everyone already knows the basics of docker, as it is one of the prerequisites.
 For brevity, here is the download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
 Simply download and install them if you haven't already done so.
 
@@ -43,6 +43,7 @@ which is the latest version as the time of writing.
     Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
 
 After that, you could check `minikube`'s version with `minikube version`.
+
 You could do the same for `kubectl` (Kubernetes' CLI) with `kubectl version`.
 
 ## Step 2: Configuring MiniKube
@@ -67,11 +68,13 @@ again after restarting the host machine, or when you're experiencing bugs.
 
 ## Step 3: Does it work?
 
-After starting up the MiniKube VM and configuring Kubectl and Docker, let's see if it works.
+After starting up the MiniKube VM and configuring `kubectl` and Docker, let's see if it works!
 
 - Bring up the Kubernetes Dashboard with `minikube dashboard`.
 
 ## Additional Notes
 
-If you're experiencing bugs or technical problems, you can **stop the VM**
-with `minikube stop`, and **delete the VM** with `minikube delete`.
+Straightforward, isn't it? The fun part is going to begin in the next section.
+
+Also, if you're experiencing bugs or technical problems, note that you can
+**stop the VM** with `minikube stop`, and **delete the VM** with `minikube delete`.
