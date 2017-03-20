@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 2 # Run 2 Pods
+  template:
+    metadata:
+      labels:
+        app: kube
+    spec:
+      containers:
+      - name: hello-kube
+        image: hello-kube:v1
+        ports:
+        - containerPort: 1337

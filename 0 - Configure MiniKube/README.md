@@ -74,6 +74,16 @@ After starting up the MiniKube VM and configuring `kubectl` and Docker, let's se
 
 2. Bring up the Kubernetes Dashboard with `minikube dashboard`.
 
+## Command Summary
+
+Start and Configure `minikube` using the following command:
+
+```
+minikube start
+kubectl config use-context minikube
+eval $(minikube docker-env)
+```
+
 ## Additional Notes
 
 Straightforward, isn't it? The fun part is about to begin in the next section!
