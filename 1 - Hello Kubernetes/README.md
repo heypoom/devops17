@@ -21,10 +21,10 @@ In Kubernetes, there are concepts of Pods and Deployments.
 
 **Pods** are **Groups of Containers**. Containers in a Pod will be able to
 talk with each other using their internal IP addresses, and share Storage Volumes.
-Note that Pods are **not durable**. It might fail and die at anytime.
+Also, Pods are **not durable**. It might fail and die at anytime.
 
 **Deployments** will **automatically restart** the Pod if it is dead. You should
-use that to manage your Pods, instead of managing it by yourself.
+use that to manage your Pods, instead of managing it manually by yourself.
 
 Let's create our first deployment with the `kubectl run` command. We're using the
 **hello-kube:v1** image and tag, and our deployment name is also **hello-kube**.
@@ -39,7 +39,7 @@ We're also telling Kubernetes that we'll need to use port **1337**.
 
 3. Remember, deployments just helps you to create pods. Let's view the Pods that are being created.
    - `kubectl get pods`
-   - Also, `po` is short for `pods`, so you can also do `kubectl get po`.
+   - Also, `po` is short for `pods`, so you can do `kubectl get po`.
 
 4. We can also view the events with `kubectl get events`, and view the config with `kubectl config view`.
 
