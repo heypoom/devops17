@@ -27,4 +27,6 @@ the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/m
 
 2. Make Kubectl (Kubernetes' CLI) use MiniKube with `kubectl config use-context minikube`
 
-3. Configure Docker's Environment Variables to use MiniKube with `minikube docker-env`
+3. Configure Docker's Environment Variables to use MiniKube with `eval $(minikube docker-env)`
+
+## Step 3: Does it work?
