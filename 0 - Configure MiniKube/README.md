@@ -10,13 +10,18 @@ We're going to use **MiniKube** to set up a Virtual Machine to play with.
 MiniKube is a tool that helps us to **create a local Kubernetes cluster**.
 So, we'll be able to do some experiments with Kubernetes directly on our laptop.
 
+## Step 0: Install Docker
+
+I assume everyone already knows the basics of docker. For brevity, here is the
+download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
+Simply download and install them.
+
 ## Step 1: Installing MiniKube
 
-First, we're going to download and install **MiniKube 0.17.1**, which is the latest as
-the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/minikube/releases).
+First, we're going to download and install **[MiniKube 0.17.1](https://github.com/kubernetes/minikube/releases)**, which is the latest as the time of writing.
 
 - Linux Users:
-  - Run the following command in your UNIX Terminal.
+  - Run the following command in your UNIX Terminal to download MiniKube and Kubectl.
   - `curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/`
 
 - macOS Users:
@@ -34,7 +39,7 @@ the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/m
 
 - Windows Users:
   - Download Windows Installer from [MiniKube Release Page](https://github.com/kubernetes/minikube/releases).
-  - Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
+    Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
 
 After that, you could check MiniKube's version with `minikube version`.
 You could do the same for Kubectl (Kubernetes CLI) with `kubectl version`.
@@ -55,15 +60,17 @@ You might need to do this after restarting the host machine, or when you're expe
    - `kubectl config use-context minikube`
 
 3. Configure Docker's Environment Variables to use MiniKube.
+   This will allow us to use the local Docker image registry,
+   so we don't have to push our images.
    - `eval $(minikube docker-env)`
-   - This will allow us to use a local Docker image registry,
-     so we don't have to push our Docker images.
 
 ## Step 3: Does it work?
 
 After starting up the MiniKube VM and configuring Kubectl and Docker, let's see if it works.
 
-### Additional Notes
+- Bring up the Kubernetes Dashboard with `minikube dashboard`.
 
-If you're experiencing bugs or technical problems, you can stop the VM
-with `minikube stop`, and delete the VM with `minikube delete`.
+## Additional Notes
+
+If you're experiencing bugs or technical problems, you can **stop the VM**
+with `minikube stop`, and **delete the VM** with `minikube delete`.
