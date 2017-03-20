@@ -54,7 +54,7 @@ we'll use it to interact with our Kubernetes cluster.
 Next, We're going to configure `minikube` and `kubectl`. You might need to do this
 again after restarting the host machine, or when you're experiencing bugs.
 
-1. Start MiniKube's Virtual Machine. This will take a while.
+1. **Start MiniKube**'s Virtual Machine. This will take a while.
    - `minikube start`
    - On macOS, you need to use `minikube start --vm-driver=xhyve` instead.
 
@@ -74,7 +74,7 @@ After starting up the MiniKube VM and configuring `kubectl` and Docker, let's se
 
 ## Additional Notes
 
-Straightforward, isn't it? The fun part is going to begin in the next section.
+Straightforward, isn't it? The fun part is about to begin in the next section!
 
 Also, if you're experiencing bugs or technical problems, you could try these commands:
 
