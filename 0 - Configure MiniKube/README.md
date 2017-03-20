@@ -70,8 +70,9 @@ again after restarting the host machine, or when you're experiencing bugs.
 
 After starting up the MiniKube VM and configuring `kubectl` and Docker, let's see if it works!
 
-- View Cluster Information with `kubectl cluster-info`
-- Bring up the Kubernetes Dashboard with `minikube dashboard`.
+1. View Cluster Information with `kubectl cluster-info`
+
+2. Bring up the Kubernetes Dashboard with `minikube dashboard`.
 
 ## Additional Notes
 
