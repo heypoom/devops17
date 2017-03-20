@@ -12,13 +12,16 @@ So, we'll be able to do some experiments with Kubernetes directly on our laptop.
 
 ## Step 0: Install Docker
 
-I assume everyone already knows the basics of docker. For brevity, here is the
-download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
-Simply download and install them.
+I'm sure everyone already knows the basics of docker, as it is one of the prerequisites.
+For brevity, here is the download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
+Simply download and install them if you haven't already done so.
+
+Don't worry if you don't know or forgot something! Feel free to ask me anytime.
 
 ## Step 1: Installing MiniKube
 
-First, we're going to download and install **[MiniKube 0.17.1](https://github.com/kubernetes/minikube/releases)**, which is the latest as the time of writing.
+First, we're going to download and install **[MiniKube 0.17.1](https://github.com/kubernetes/minikube/releases)**,
+which is the latest version as the time of writing.
 
 - Linux Users:
   - Run the following command in your UNIX Terminal to download MiniKube and Kubectl.
