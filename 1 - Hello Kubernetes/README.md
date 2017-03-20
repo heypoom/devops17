@@ -66,3 +66,29 @@ We'll do that with the `kubectl expose` command.
 4. Let's view logs inside you pod.
    - First, get the Pod's name with `kubectl get po`
    - Next, use the `kubectl logs <POD-NAME>` command.
+
+## Summary for Part 1
+
+### Concepts
+
+**Pods** are Groups of Containers linked together. They're not durable.
+
+**Deployments** are used to automatically restart dead Pods. Use this to manage your Pods.
+
+### Commands
+
+Build Image: `sudo docker build -t hello-kube:v1 .`
+
+Create a Deployment: `kubectl run hello-kube --image=hello-kube:v1 --port=1337`
+
+Expose a Service: `kubectl expose deploy hello-kube --type=LoadBalancer`
+
+Delete: `kubectl delete <deploy/service> hello-kube`
+
+Get information: `kubectl get <deploy/pods/services>`
+
+Get even more information: `kubectl describe <deploy/pods/services>`
+
+View Logs: `kubectl logs <POD-NAME>`
+
+Access Service on MiniKube: `minikube service hello-kube`
