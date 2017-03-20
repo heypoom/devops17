@@ -67,6 +67,15 @@ We'll do that with the `kubectl expose` command.
    - First, get the Pod's name with `kubectl get po`
    - Next, use the `kubectl logs <POD-NAME>` command.
 
+## Step 4: Cleaning Up
+
+You can delete the services and deployments.
+
+```
+kubectl delete service hello-kube
+kubectl delete deploy hello-kube
+```
+
 ## Summary for Part 1
 
 ### Concepts
