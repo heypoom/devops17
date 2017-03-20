@@ -5,10 +5,10 @@ Do note that this might take a while. Please get them ready as soon as possible,
 so we could go straight to the fun part!
 
 We're going to use **MiniKube** to set up a Virtual Machine to run Kubernetes on.
-MiniKube is a tool that helps us to **create a local Kubernetes cluster**.
+It is a tool that helps us to **create a local Kubernetes cluster**.
 So, we'll be able to do some experiments with Kubernetes directly on our laptop.
 
-## Step 0: Install Docker
+## Step 0: Installing Docker
 
 I'm sure everyone already knows the basics of docker, as it is one of the prerequisites.
 For brevity, here is the download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
@@ -42,13 +42,13 @@ which is the latest version as the time of writing.
   - Download the Windows Installer from [MiniKube Release Page](https://github.com/kubernetes/minikube/releases).
     Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
 
-After that, you could check MiniKube's version with `minikube version`.
-You could do the same for Kubectl (Kubernetes CLI) with `kubectl version`.
+After that, you could check `minikube`'s version with `minikube version`.
+You could do the same for `kubectl` (Kubernetes' CLI) with `kubectl version`.
 
 ## Step 2: Configuring MiniKube
 
 First of all, **kubectl** is **Kubernetes' Command Line Interface**, which
-we'll use it to control and interact with our Kubernetes cluster.
+we'll use it to interact with our Kubernetes cluster.
 
 Next, We're going to configure `minikube` and `kubectl`. You might need to do this
 again after restarting the host machine, or when you're experiencing bugs.
