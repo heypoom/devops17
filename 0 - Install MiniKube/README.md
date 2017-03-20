@@ -5,7 +5,8 @@ several nodes/clusters, so we can experiment with them.
 
 ## Step 1: Installation
 
-First, we're going to install MiniKube from [MiniKube's GitHub](https://github.com/kubernetes/minikube/releases)
+First, we're going to install MiniKube 0.17.1 (Latest as the time of writing) from
+[MiniKube's GitHub](https://github.com/kubernetes/minikube/releases)
 
 1. Download and Install MiniKube for your OS.
   - Linux Users:
@@ -20,12 +21,9 @@ First, we're going to install MiniKube from [MiniKube's GitHub](https://github.c
     - Download Windows Installer from [MiniKube Release Page](https://github.com/kubernetes/minikube/releases).
     - Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
 
-2. Start MiniKube
-  - `minikube start`
-  - On macOS, you need to use `minikube start --vm-driver=xhyve`
+2. Start MiniKube with `minikube start`
+   - On macOS, you need to use `minikube start --vm-driver=xhyve`
 
-3. Make Kubectl (Kubernetes' CLI) use MiniKube
-  - `kubectl config use-context minikube`
+3. Make Kubectl (Kubernetes' CLI) use MiniKube using `kubectl config use-context minikube`
 
-4. Set Docker's Environment Variables to use MiniKube
-  - `minikube docker-env`
+4. Configure Docker's Environment Variables to use MiniKube with `minikube docker-env`
