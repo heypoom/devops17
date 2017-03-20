@@ -22,11 +22,16 @@ the time of writing. Here is [MiniKube's GitHub](https://github.com/kubernetes/m
 
 ## Step 2: Configuring MiniKube
 
-1. Start MiniKube with `minikube start`
-   - On macOS, you need to use `minikube start --vm-driver=xhyve`
+You need to do this everytime you restart MiniKube.
 
-2. Make Kubectl (Kubernetes' CLI) use MiniKube with `kubectl config use-context minikube`
+1. Start MiniKube's Virtual Machine.
+   - `minikube start`
+   - On macOS, you need to use `minikube start --vm-driver=xhyve` instead.
 
-3. Configure Docker's Environment Variables to use MiniKube with `eval $(minikube docker-env)`
+2. Configure Kubectl (Kubernetes' CLI) to use MiniKube's context.
+   - `kubectl config use-context minikube`
+
+3. Configure Docker's Environment Variables to use MiniKube.
+   - `eval $(minikube docker-env)`
 
 ## Step 3: Does it work?
