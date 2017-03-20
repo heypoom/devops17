@@ -75,6 +75,9 @@ We'll do that with the `kubectl expose` command.
 
 **Deployments** are used to automatically restart dead Pods. Use this to manage your Pods.
 
+**Services** abstract access to your Pods. Services with the `LoadBalancer` type
+will expose your pods to the public.
+
 ### Commands
 
 Build Image: `sudo docker build -t hello-kube:v1 .`
