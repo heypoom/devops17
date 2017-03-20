@@ -1,12 +1,10 @@
-Welcome to the Kubernetes Journey. Let's begin with installing the necessary tools.
+# Installing and Configuring MiniKube
 
+Welcome to the Kubernetes Journey. Let's begin with installing the necessary tools.
 Do note that this might take a while.
 Please get them ready, so we could go straight to the fun part!
 
-# Installing and Configuring MiniKube
-
-We're going to use **MiniKube** to set up a Virtual Machine to play with.
-
+We're going to use **MiniKube** to set up a Virtual Machine to run Kubernetes on.
 MiniKube is a tool that helps us to **create a local Kubernetes cluster**.
 So, we'll be able to do some experiments with Kubernetes directly on our laptop.
 
@@ -16,7 +14,7 @@ I'm sure everyone already knows the basics of docker, as it is one of the prereq
 For brevity, here is the download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
 Simply download and install them if you haven't already done so.
 
-Don't worry if you don't know or forgot something! Feel free to ask me anytime.
+Don't worry if you don't know or forgot something! Feel free to ask me in the meantime.
 
 ## Step 1: Installing MiniKube
 
@@ -41,7 +39,7 @@ which is the latest version as the time of writing.
   && chmod +x ./kubectl && sudo mv ./kubectl /usr/local/bin/kubectl`
 
 - Windows Users:
-  - Download Windows Installer from [MiniKube Release Page](https://github.com/kubernetes/minikube/releases).
+  - Download the Windows Installer from [MiniKube Release Page](https://github.com/kubernetes/minikube/releases).
     Here is the [Direct Link](https://github.com/kubernetes/minikube/releases/download/v0.17.1/minikube-installer.exe).
 
 After that, you could check MiniKube's version with `minikube version`.
@@ -49,11 +47,11 @@ You could do the same for Kubectl (Kubernetes CLI) with `kubectl version`.
 
 ## Step 2: Configuring MiniKube
 
-We're going to configure `minikube` and `kubectl`. **kubectl** is
-**Kubernetes' Command Line Interface**, which we'll use it to control
-and interact with our Kubernetes cluster.
+First of all, **kubectl** is **Kubernetes' Command Line Interface**, which
+we'll use it to control and interact with our Kubernetes cluster.
 
-You might need to do this after restarting the host machine, or when you're experiencing bugs.
+Next, We're going to configure `minikube` and `kubectl`. You might need to do this
+again after restarting the host machine, or when you're experiencing bugs.
 
 1. Start MiniKube's Virtual Machine. This will take a while.
    - `minikube start`
