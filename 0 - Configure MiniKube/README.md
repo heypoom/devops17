@@ -1,4 +1,4 @@
-# Installing and Configuring MiniKube
+# Part 0 - Installing and Configuring MiniKube
 
 Welcome to the Kubernetes Journey! Let us begin with installing the necessary tools.
 Do note that this might take a while. Please get them ready as soon as possible,
@@ -14,7 +14,7 @@ I'm quite sure everyone already knows the basics of docker, as it is one of the 
 For brevity, here is the download link for **[Docker Community Edition](https://www.docker.com/community-edition#/download)**.
 Simply download and install them if you haven't already done so.
 
-Don't worry if you don't know or forgot something! Feel free to ask me in the meantime.
+Don't worry if you don't know or forgot something! Please don't hesitate to ask me in the meantime.
 
 ## Step 1: Installing MiniKube
 
@@ -76,5 +76,7 @@ After starting up the MiniKube VM and configuring `kubectl` and Docker, let's se
 
 Straightforward, isn't it? The fun part is going to begin in the next section.
 
-Also, if you're experiencing bugs or technical problems, note that you can
-**stop the VM** with `minikube stop`, and **delete the VM** with `minikube delete`.
+Also, if you're experiencing bugs or technical problems, you could try these commands:
+
+- **Stop the MiniKube VM** with `minikube stop`
+- **Delete the MiniKube VM** with `minikube delete`
