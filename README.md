@@ -3,6 +3,12 @@
 Welcome! This is a 3-hour Workshop which will introduce you to the basics of
 orchestrating and scaling microservices with Kubernetes.
 
+## PowerPoint Slides
+
+Here are the download links:
+- [PDF Format](https://drive.google.com/open?id=0B5aIXWYwLqCDMDdfYzdXZWJ1TXc)
+- [PPTX Format](https://drive.google.com/open?id=0B5aIXWYwLqCDbUQ4QnlJWnhfMnM)
+
 ## What is Kubernetes?
 
 It is a platform for automating deployments of containers across clusters.
